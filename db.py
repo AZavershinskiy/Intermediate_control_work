@@ -1,16 +1,42 @@
-import controller
+import csv
+import os
 
 
-def save_note(id, date, note):
-    with open(controller.path, 'a') as file:
-        file.write(f'{id},{date},{note};\n')
+def read_file(path):
+    notes = []
+    if os.path.exists(path):
+        with open(path, 'r') as f:
+            reader = csv.reader(f, delimiter=';')
+            next(reader)
+            for note in reader:
+                notes.append(list(note))
+        return notes
+    else:
+        with open(path, 'w') as f2:
+            writer = csv.writer(f2, delimiter=';')
+            writer.writerow(headers)
+        return notes
 
 
-def read_note():
-    with open(controller.path, 'r') as file:
-        return file.readline()[controller.note_id]
+def save_to_file(new_note):
+    with open(path, 'a') as f:
+        writer = csv.writer(f, delimiter=';')
+        writer.writerow(new_note)
+    read_file(path)
 
 
-def read_all():
-    with open(controller.path, 'r') as file:
-        return file.readlines()
+def update_file(updated_notes):
+    with open(path, 'w') as f:
+        writer = csv.writer(f, delimiter=';')
+        writer.writerow(headers)
+        for note in updated_notes:
+            writer.writerow(list(note))
+    read_file(path)
+
+
+path = 'Notes.csv'
+
+headers = ['ID',
+           'DATE',
+           'TITLE',
+           'NOTE']
