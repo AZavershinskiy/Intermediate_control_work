@@ -30,7 +30,7 @@ def update_file(updated_notes):
         writer = csv.writer(f, delimiter=';')
         writer.writerow(headers)
         for note in updated_notes:
-            writer.writerow(list(note))
+            writer.writerow(note)
     read_file(path)
 
 

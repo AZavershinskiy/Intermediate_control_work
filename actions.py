@@ -1,27 +1,22 @@
 from datetime import datetime
 
 
-def create_note(notes):
-    title = input('Input Title: ')
-    text = input('Input Text: ')
-    note = [new_id(notes), get_date(), title, text]
+def create_note(notes: list, title: str, note_text: str):
+    note = [new_id(notes), get_date(), title, note_text]
     return note
 
 
-def find_note(notes):
-    note_id = input('Input Note ID: ')
+def find_note(notes: list, note_id: str):
     for note in notes:
         if note_id in note:
             return note
 
 
-def show_all(notes):
+def show_all(notes: list):
     return notes
 
 
-def show_by_date(notes):
-    selected_date = input(
-        'Input the date of the Notes in the format: dd/mm/yyyy: ')
+def show_by_date(notes: list, selected_date: str):
     filtered_notes = []
     for note in notes:
         if selected_date in note[1]:
@@ -29,21 +24,22 @@ def show_by_date(notes):
     return filtered_notes
 
 
-def edit_note(notes):
-    note = find_note(notes)
-    new_title = input('Input Title: ')
-    new_note = input('Input Text: ')
-    edited_note = [note[0], note[1], new_title, new_note]
-    updated_notes = []
-    
-    return updated_notes
+def edit_note(notes: list, note_id: str, new_title: str, new_note: str):
+    note = find_note(notes, note_id)
+    edited_note = [note[0], get_date(), new_title, new_note]
+    notes.remove(note)
+    notes.append(edited_note)
+    notes.sort()
+    return notes
 
 
-def delete_note(notes):
-    return
+def delete_note(notes: list, note_id: str):
+    note = find_note(notes, note_id)
+    notes.remove(note)
+    return notes
 
 
-def new_id(notes):
+def new_id(notes: list):
     if (notes == []):
         return '1'
     else:
