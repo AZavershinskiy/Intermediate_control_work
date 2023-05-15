@@ -34,7 +34,7 @@ def update_file(updated_notes):
     read_file(path)
 
 
-path = 'Notes.csv'
+path = 'Python/Notes.csv'
 
 headers = ['ID',
            'DATE',
