@@ -1,0 +1,44 @@
+May 17, 2023 2:57:49 AM Main main
+INFO: Main run
+May 17, 2023 2:57:49 AM model.FileOperationToy <init>
+INFO: Filewriter sucsessful init
+May 17, 2023 2:57:49 AM model.FileOperationToy <init>
+INFO: Filewriter sucsessful init
+May 17, 2023 2:57:49 AM model.FileOperationToy <init>
+INFO: Filewriter sucsessful init
+May 17, 2023 2:57:49 AM model.FileOperationToy readAllLines
+INFO: All lines are readed
+May 17, 2023 2:57:49 AM model.FileOperationToy readAllLines
+INFO: All lines are readed
+May 17, 2023 2:57:49 AM model.FileOperationToy readAllLines
+INFO: All lines are readed
+May 17, 2023 2:58:11 AM view.ViewToy run
+INFO: Command entered: g
+May 17, 2023 2:58:12 AM model.FileOperationToy readAllLines
+INFO: All lines are readed
+May 17, 2023 2:58:12 AM controller.ControllerToy readToy
+INFO: Read toy (Robocop)
+May 17, 2023 2:58:12 AM model.FileOperationToy readAllLines
+INFO: All lines are readed
+May 17, 2023 2:58:12 AM controller.ControllerToy readToy
+INFO: Read toy (Robocop)
+May 17, 2023 2:58:12 AM model.FileOperationToy readAllLines
+INFO: All lines are readed
+May 17, 2023 2:58:12 AM model.FileOperationToy saveAllLines
+INFO: All lines are saved
+May 17, 2023 2:58:12 AM controller.ControllerToy deleteToy
+INFO: Delete toy (Robocop)
+May 17, 2023 2:58:12 AM model.FileOperationToy readAllLines
+INFO: All lines are readed
+May 17, 2023 2:58:12 AM model.FileOperationToy saveAllLines
+INFO: All lines are saved
+May 17, 2023 2:58:12 AM controller.ControllerToy addToy
+INFO: Delete toy (Robocop)
+May 17, 2023 2:58:12 AM model.FileOperationToy readAllLines
+INFO: All lines are readed
+May 17, 2023 2:58:12 AM model.FileOperationToy readAllLines
+INFO: All lines are readed
+May 17, 2023 2:58:12 AM model.FileOperationToy readAllLines
+INFO: All lines are readed
+May 17, 2023 2:58:14 AM view.ViewToy run
+INFO: Command entered: q

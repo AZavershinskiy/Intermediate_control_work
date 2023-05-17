@@ -1,0 +1,8 @@
+2;Robocop;8;20
+8;Soldier;7;49
+7;Ball;3;35
+9;Bunny;2;31
+10;Bear;2;31
+11;Keychain;5;70
+12;Tiger;3;25
+7;Rubik's Cube;1;35

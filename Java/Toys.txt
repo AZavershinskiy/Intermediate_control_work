@@ -1,0 +1,8 @@
+1;Cheburashka;4;10
+7;Rubik's Cube;4;35
+8;Soldier;22;49
+9;Bunny;18;31
+10;Bear;18;31
+11;Keychain;35;70
+12;Tiger;5;25
+13;Fish;13;38

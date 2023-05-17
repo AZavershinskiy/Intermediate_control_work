@@ -1,0 +1,490 @@
+(base) a_zavershinskiy@MBPAZavshinskiy ~ % ssh andrey@192.168.64.10
+andrey@192.168.64.10's password: 
+Welcome to Ubuntu 22.04.2 LTS (GNU/Linux 5.19.0-42-generic aarch64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+Expanded Security Maintenance for Applications is not enabled.
+
+0 updates can be applied immediately.
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+The list of available updates is more than a week old.
+To check for new updates run: sudo apt update
+Last login: Wed Apr 26 23:18:48 2023 from 192.168.64.1
+andrey@utm-vm:~$ sudo apt update
+[sudo] password for andrey: 
+Get:1 http://ports.ubuntu.com/ubuntu-ports jammy-security InRelease [110 kB]
+Hit:2 http://ru.ports.ubuntu.com/ubuntu-ports jammy InRelease
+Get:3 http://ru.ports.ubuntu.com/ubuntu-ports jammy-updates InRelease [119 kB]
+Get:4 http://ports.ubuntu.com/ubuntu-ports jammy-proposed InRelease [270 kB]
+Get:5 http://ru.ports.ubuntu.com/ubuntu-ports jammy-backports InRelease [108 kB]
+Get:6 http://ports.ubuntu.com/ubuntu-ports jammy-security/main arm64 Packages [352 kB]
+Get:7 http://ru.ports.ubuntu.com/ubuntu-ports jammy-updates/main arm64 Packages [566 kB]
+Get:8 http://ports.ubuntu.com/ubuntu-ports jammy-security/main Translation-en [111 kB]
+Get:9 http://ports.ubuntu.com/ubuntu-ports jammy-security/main arm64 DEP-11 Metadata [41,5 kB]
+Get:10 http://ports.ubuntu.com/ubuntu-ports jammy-security/main arm64 c-n-f Metadata [9 448 B]
+Get:11 http://ports.ubuntu.com/ubuntu-ports jammy-security/restricted arm64 Packages [146 kB]
+Get:12 http://ports.ubuntu.com/ubuntu-ports jammy-security/restricted Translation-en [41,0 kB]
+Get:13 http://ports.ubuntu.com/ubuntu-ports jammy-security/multiverse arm64 Packages [15,9 kB]
+Get:14 http://ports.ubuntu.com/ubuntu-ports jammy-security/multiverse Translation-en [5 828 B]
+Get:15 http://ports.ubuntu.com/ubuntu-ports jammy-proposed/main arm64 Packages [170 kB]
+Get:16 http://ru.ports.ubuntu.com/ubuntu-ports jammy-updates/main Translation-en [170 kB]
+Get:17 http://ru.ports.ubuntu.com/ubuntu-ports jammy-updates/main arm64 DEP-11 Metadata [99,4 kB]
+Get:18 http://ru.ports.ubuntu.com/ubuntu-ports jammy-updates/main arm64 c-n-f Metadata [14,1 kB]
+Get:19 http://ru.ports.ubuntu.com/ubuntu-ports jammy-updates/restricted arm64 Packages [147 kB]
+Get:20 http://ru.ports.ubuntu.com/ubuntu-ports jammy-updates/restricted Translation-en [41,3 kB]
+Get:21 http://ru.ports.ubuntu.com/ubuntu-ports jammy-updates/multiverse arm64 Packages [19,5 kB]
+Get:22 http://ru.ports.ubuntu.com/ubuntu-ports jammy-updates/multiverse Translation-en [8 452 B]
+Get:23 http://ports.ubuntu.com/ubuntu-ports jammy-proposed/main Translation-en [46,4 kB]
+Get:24 http://ru.ports.ubuntu.com/ubuntu-ports jammy-updates/multiverse arm64 DEP-11 Metadata [212 B]
+Get:25 http://ru.ports.ubuntu.com/ubuntu-ports jammy-backports/main arm64 DEP-11 Metadata [5 240 B]
+Get:26 http://ports.ubuntu.com/ubuntu-ports jammy-proposed/main arm64 DEP-11 Metadata [34,2 kB]
+Get:27 http://ports.ubuntu.com/ubuntu-ports jammy-proposed/main DEP-11 48x48 Icons [8 490 B]
+Get:28 http://ports.ubuntu.com/ubuntu-ports jammy-proposed/main DEP-11 64x64 Icons [12,8 kB]
+Get:29 http://ports.ubuntu.com/ubuntu-ports jammy-proposed/main arm64 c-n-f Metadata [2 492 B]
+Get:30 http://ports.ubuntu.com/ubuntu-ports jammy-proposed/restricted arm64 Packages [167 kB]
+Get:31 http://ports.ubuntu.com/ubuntu-ports jammy-proposed/restricted Translation-en [44,7 kB]
+Get:32 http://ports.ubuntu.com/ubuntu-ports jammy-proposed/restricted arm64 c-n-f Metadata [308 B]
+Fetched 2 887 kB in 2s (1 671 kB/s)  
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+33 packages can be upgraded. Run 'apt list --upgradable' to see them.
+andrey@utm-vm:~$ sudo apt list --upgradable
+Listing... Done
+apport-gtk/jammy-proposed 2.20.11-0ubuntu82.5 all [upgradable from: 2.20.11-0ubuntu82.4]
+apport/jammy-proposed 2.20.11-0ubuntu82.5 all [upgradable from: 2.20.11-0ubuntu82.4]
+distro-info-data/jammy-updates 0.52ubuntu0.4 all [upgradable from: 0.52ubuntu0.3]
+gir1.2-javascriptcoregtk-4.0/jammy-updates,jammy-security 2.38.6-0ubuntu0.22.04.1 arm64 [upgradable from: 2.38.5-0ubuntu0.22.04.1]
+gir1.2-webkit2-4.0/jammy-updates,jammy-security 2.38.6-0ubuntu0.22.04.1 arm64 [upgradable from: 2.38.5-0ubuntu0.22.04.1]
+git-man/jammy-updates,jammy-security 1:2.34.1-1ubuntu1.9 all [upgradable from: 1:2.34.1-1ubuntu1.8]
+git/jammy-updates,jammy-security 1:2.34.1-1ubuntu1.9 arm64 [upgradable from: 1:2.34.1-1ubuntu1.8]
+ipp-usb/jammy-updates,jammy-security 0.9.20-1ubuntu0.22.04.1 arm64 [upgradable from: 0.9.20-1]
+iptables/jammy-proposed 1.8.7-1ubuntu5.1 arm64 [upgradable from: 1.8.7-1ubuntu5]
+libegl-mesa0/jammy-proposed 22.2.5-0ubuntu0.1~22.04.2 arm64 [upgradable from: 22.2.5-0ubuntu0.1~22.04.1]
+libfreetype6/jammy-updates,jammy-security 2.11.1+dfsg-1ubuntu0.2 arm64 [upgradable from: 2.11.1+dfsg-1ubuntu0.1]
+libgbm1/jammy-proposed 22.2.5-0ubuntu0.1~22.04.2 arm64 [upgradable from: 22.2.5-0ubuntu0.1~22.04.1]
+libgl1-mesa-dri/jammy-proposed 22.2.5-0ubuntu0.1~22.04.2 arm64 [upgradable from: 22.2.5-0ubuntu0.1~22.04.1]
+libglapi-mesa/jammy-proposed 22.2.5-0ubuntu0.1~22.04.2 arm64 [upgradable from: 22.2.5-0ubuntu0.1~22.04.1]
+libglx-mesa0/jammy-proposed 22.2.5-0ubuntu0.1~22.04.2 arm64 [upgradable from: 22.2.5-0ubuntu0.1~22.04.1]
+libip4tc2/jammy-proposed 1.8.7-1ubuntu5.1 arm64 [upgradable from: 1.8.7-1ubuntu5]
+libip6tc2/jammy-proposed 1.8.7-1ubuntu5.1 arm64 [upgradable from: 1.8.7-1ubuntu5]
+libjavascriptcoregtk-4.0-18/jammy-updates,jammy-security 2.38.6-0ubuntu0.22.04.1 arm64 [upgradable from: 2.38.5-0ubuntu0.22.04.1]
+libwebkit2gtk-4.0-37/jammy-updates,jammy-security 2.38.6-0ubuntu0.22.04.1 arm64 [upgradable from: 2.38.5-0ubuntu0.22.04.1]
+libwebp7/jammy-updates,jammy-security 1.2.2-2ubuntu0.22.04.1 arm64 [upgradable from: 1.2.2-2]
+libwebpdemux2/jammy-updates,jammy-security 1.2.2-2ubuntu0.22.04.1 arm64 [upgradable from: 1.2.2-2]
+libwebpmux3/jammy-updates,jammy-security 1.2.2-2ubuntu0.22.04.1 arm64 [upgradable from: 1.2.2-2]
+libxtables12/jammy-proposed 1.8.7-1ubuntu5.1 arm64 [upgradable from: 1.8.7-1ubuntu5]
+mesa-vulkan-drivers/jammy-proposed 22.2.5-0ubuntu0.1~22.04.2 arm64 [upgradable from: 22.2.5-0ubuntu0.1~22.04.1]
+python3-apport/jammy-proposed 2.20.11-0ubuntu82.5 all [upgradable from: 2.20.11-0ubuntu82.4]
+python3-problem-report/jammy-proposed 2.20.11-0ubuntu82.5 all [upgradable from: 2.20.11-0ubuntu82.4]
+python3-software-properties/jammy-proposed 0.99.22.7 all [upgradable from: 0.99.22.6]
+software-properties-common/jammy-proposed 0.99.22.7 all [upgradable from: 0.99.22.6]
+software-properties-gtk/jammy-proposed 0.99.22.7 all [upgradable from: 0.99.22.6]
+ubuntu-desktop-minimal/jammy-proposed 1.481.1 arm64 [upgradable from: 1.481]
+ubuntu-desktop/jammy-proposed 1.481.1 arm64 [upgradable from: 1.481]
+ubuntu-minimal/jammy-proposed 1.481.1 arm64 [upgradable from: 1.481]
+ubuntu-standard/jammy-proposed 1.481.1 arm64 [upgradable from: 1.481]
+andrey@utm-vm:~$ sudo apt upgrade
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+Calculating upgrade... Done
+The following packages were automatically installed and are no longer required:
+  linux-headers-5.19.0-32-generic linux-hwe-5.19-headers-5.19.0-32
+  linux-image-5.19.0-32-generic linux-modules-5.19.0-32-generic
+  linux-modules-extra-5.19.0-32-generic
+Use 'sudo apt autoremove' to remove them.
+The following NEW packages will be installed:
+  firefox
+The following packages will be upgraded:
+  apport apport-gtk distro-info-data gir1.2-javascriptcoregtk-4.0
+  gir1.2-webkit2-4.0 git git-man ipp-usb iptables libegl-mesa0 libfreetype6
+  libgbm1 libgl1-mesa-dri libglapi-mesa libglx-mesa0 libip4tc2 libip6tc2
+  libjavascriptcoregtk-4.0-18 libwebkit2gtk-4.0-37 libwebp7 libwebpdemux2
+  libwebpmux3 libxtables12 mesa-vulkan-drivers python3-apport
+  python3-problem-report python3-software-properties
+  software-properties-common software-properties-gtk ubuntu-desktop
+  ubuntu-desktop-minimal ubuntu-minimal ubuntu-standard
+33 upgraded, 1 newly installed, 0 to remove and 0 not upgraded.
+11 standard LTS security updates
+Need to get 45,0 MB of archives.
+After this operation, 563 kB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://ports.ubuntu.com/ubuntu-ports jammy-proposed/main arm64 iptables arm64 1.8.7-1ubuntu5.1 [451 kB]
+Get:2 http://ru.ports.ubuntu.com/ubuntu-ports jammy/main arm64 firefox arm64 1:1snap1-0ubuntu2 [72,3 kB]
+Get:3 http://ru.ports.ubuntu.com/ubuntu-ports jammy-updates/main arm64 distro-info-data all 0.52ubuntu0.4 [4 986 B]
+Get:4 http://ru.ports.ubuntu.com/ubuntu-ports jammy-updates/main arm64 gir1.2-webkit2-4.0 arm64 2.38.6-0ubuntu0.22.04.1 [96,0 kB]
+Get:5 http://ports.ubuntu.com/ubuntu-ports jammy-proposed/main arm64 libxtables12 arm64 1.8.7-1ubuntu5.1 [30,9 kB]
+Get:6 http://ports.ubuntu.com/ubuntu-ports jammy-proposed/main arm64 libip6tc2 arm64 1.8.7-1ubuntu5.1 [20,1 kB]
+Get:7 http://ports.ubuntu.com/ubuntu-ports jammy-proposed/main arm64 libip4tc2 arm64 1.8.7-1ubuntu5.1 [19,9 kB]
+Get:8 http://ports.ubuntu.com/ubuntu-ports jammy-proposed/main arm64 ubuntu-minimal arm64 1.481.1 [2 792 B]
+Get:9 http://ports.ubuntu.com/ubuntu-ports jammy-proposed/main arm64 ubuntu-standard arm64 1.481.1 [2 818 B]
+Get:10 http://ports.ubuntu.com/ubuntu-ports jammy-proposed/main arm64 python3-problem-report all 2.20.11-0ubuntu82.5 [11,1 kB]
+Get:11 http://ports.ubuntu.com/ubuntu-ports jammy-proposed/main arm64 python3-apport all 2.20.11-0ubuntu82.5 [88,9 kB]
+Get:12 http://ru.ports.ubuntu.com/ubuntu-ports jammy-updates/main arm64 gir1.2-javascriptcoregtk-4.0 arm64 2.38.6-0ubuntu0.22.04.1 [31,9 kB]
+Get:13 http://ports.ubuntu.com/ubuntu-ports jammy-proposed/main arm64 apport all 2.20.11-0ubuntu82.5 [133 kB]
+Get:14 http://ru.ports.ubuntu.com/ubuntu-ports jammy-updates/main arm64 libwebkit2gtk-4.0-37 arm64 2.38.6-0ubuntu0.22.04.1 [18,6 MB]
+Get:15 http://ports.ubuntu.com/ubuntu-ports jammy-proposed/main arm64 apport-gtk all 2.20.11-0ubuntu82.5 [9 606 B]
+Get:16 http://ports.ubuntu.com/ubuntu-ports jammy-proposed/main arm64 libegl-mesa0 arm64 22.2.5-0ubuntu0.1~22.04.2 [109 kB]
+Get:17 http://ports.ubuntu.com/ubuntu-ports jammy-proposed/main arm64 libgbm1 arm64 22.2.5-0ubuntu0.1~22.04.2 [33,1 kB]
+Get:18 http://ports.ubuntu.com/ubuntu-ports jammy-proposed/main arm64 libgl1-mesa-dri arm64 22.2.5-0ubuntu0.1~22.04.2 [7 232 kB]
+Get:19 http://ports.ubuntu.com/ubuntu-ports jammy-proposed/main arm64 libglx-mesa0 arm64 22.2.5-0ubuntu0.1~22.04.2 [165 kB]
+Get:20 http://ports.ubuntu.com/ubuntu-ports jammy-proposed/main arm64 libglapi-mesa arm64 22.2.5-0ubuntu0.1~22.04.2 [67,5 kB]
+Get:21 http://ports.ubuntu.com/ubuntu-ports jammy-proposed/main arm64 mesa-vulkan-drivers arm64 22.2.5-0ubuntu0.1~22.04.2 [4 268 kB]
+Get:22 http://ports.ubuntu.com/ubuntu-ports jammy-proposed/main arm64 software-properties-common all 0.99.22.7 [14,1 kB]
+Get:23 http://ports.ubuntu.com/ubuntu-ports jammy-proposed/main arm64 software-properties-gtk all 0.99.22.7 [71,3 kB]
+Get:24 http://ports.ubuntu.com/ubuntu-ports jammy-proposed/main arm64 python3-software-properties all 0.99.22.7 [28,8 kB]
+Get:25 http://ports.ubuntu.com/ubuntu-ports jammy-proposed/main arm64 ubuntu-desktop-minimal arm64 1.481.1 [3 660 B]
+Get:26 http://ports.ubuntu.com/ubuntu-ports jammy-proposed/main arm64 ubuntu-desktop arm64 1.481.1 [2 580 B]
+Get:27 http://ru.ports.ubuntu.com/ubuntu-ports jammy-updates/main arm64 libjavascriptcoregtk-4.0-18 arm64 2.38.6-0ubuntu0.22.04.1 [6 859 kB]
+Get:28 http://ru.ports.ubuntu.com/ubuntu-ports jammy-updates/main arm64 libfreetype6 arm64 2.11.1+dfsg-1ubuntu0.2 [383 kB]
+Get:29 http://ru.ports.ubuntu.com/ubuntu-ports jammy-updates/main arm64 libwebp7 arm64 1.2.2-2ubuntu0.22.04.1 [193 kB]
+Get:30 http://ru.ports.ubuntu.com/ubuntu-ports jammy-updates/main arm64 libwebpdemux2 arm64 1.2.2-2ubuntu0.22.04.1 [9 934 B]
+Get:31 http://ru.ports.ubuntu.com/ubuntu-ports jammy-updates/main arm64 git-man all 1:2.34.1-1ubuntu1.9 [954 kB]  
+Get:32 http://ru.ports.ubuntu.com/ubuntu-ports jammy-updates/main arm64 git arm64 1:2.34.1-1ubuntu1.9 [3 223 kB]  
+Get:33 http://ru.ports.ubuntu.com/ubuntu-ports jammy-updates/main arm64 ipp-usb arm64 0.9.20-1ubuntu0.22.04.1 [1 830 kB]
+Get:34 http://ru.ports.ubuntu.com/ubuntu-ports jammy-updates/main arm64 libwebpmux3 arm64 1.2.2-2ubuntu0.22.04.1 [20,6 kB]
+Fetched 45,0 MB in 24s (1 841 kB/s)                                                                               
+Extracting templates from packages: 100%
+Preconfiguring packages ...
+Selecting previously unselected package firefox.
+(Reading database ... 227246 files and directories currently installed.)
+Preparing to unpack .../00-firefox_1%3a1snap1-0ubuntu2_arm64.deb ...
+=> Installing the firefox snap
+==> Checking connectivity with the snap store
+==> Installing the firefox snap
+snap "firefox" is already installed, see 'snap help refresh'
+=> Snap installation complete
+Unpacking firefox (1:1snap1-0ubuntu2) ...
+Preparing to unpack .../01-distro-info-data_0.52ubuntu0.4_all.deb ...
+Unpacking distro-info-data (0.52ubuntu0.4) over (0.52ubuntu0.3) ...
+Preparing to unpack .../02-iptables_1.8.7-1ubuntu5.1_arm64.deb ...
+Unpacking iptables (1.8.7-1ubuntu5.1) over (1.8.7-1ubuntu5) ...
+Preparing to unpack .../03-libxtables12_1.8.7-1ubuntu5.1_arm64.deb ...
+Unpacking libxtables12:arm64 (1.8.7-1ubuntu5.1) over (1.8.7-1ubuntu5) ...
+Preparing to unpack .../04-libip6tc2_1.8.7-1ubuntu5.1_arm64.deb ...
+Unpacking libip6tc2:arm64 (1.8.7-1ubuntu5.1) over (1.8.7-1ubuntu5) ...
+Preparing to unpack .../05-libip4tc2_1.8.7-1ubuntu5.1_arm64.deb ...
+Unpacking libip4tc2:arm64 (1.8.7-1ubuntu5.1) over (1.8.7-1ubuntu5) ...
+Preparing to unpack .../06-ubuntu-minimal_1.481.1_arm64.deb ...
+Unpacking ubuntu-minimal (1.481.1) over (1.481) ...
+Preparing to unpack .../07-ubuntu-standard_1.481.1_arm64.deb ...
+Unpacking ubuntu-standard (1.481.1) over (1.481) ...
+Preparing to unpack .../08-python3-problem-report_2.20.11-0ubuntu82.5_all.deb ...
+Unpacking python3-problem-report (2.20.11-0ubuntu82.5) over (2.20.11-0ubuntu82.4) ...
+Preparing to unpack .../09-python3-apport_2.20.11-0ubuntu82.5_all.deb ...
+Unpacking python3-apport (2.20.11-0ubuntu82.5) over (2.20.11-0ubuntu82.4) ...
+Preparing to unpack .../10-apport_2.20.11-0ubuntu82.5_all.deb ...
+Unpacking apport (2.20.11-0ubuntu82.5) over (2.20.11-0ubuntu82.4) ...
+Preparing to unpack .../11-apport-gtk_2.20.11-0ubuntu82.5_all.deb ...
+Unpacking apport-gtk (2.20.11-0ubuntu82.5) over (2.20.11-0ubuntu82.4) ...
+Preparing to unpack .../12-gir1.2-webkit2-4.0_2.38.6-0ubuntu0.22.04.1_arm64.deb ...
+Unpacking gir1.2-webkit2-4.0:arm64 (2.38.6-0ubuntu0.22.04.1) over (2.38.5-0ubuntu0.22.04.1) ...
+Preparing to unpack .../13-gir1.2-javascriptcoregtk-4.0_2.38.6-0ubuntu0.22.04.1_arm64.deb ...
+Unpacking gir1.2-javascriptcoregtk-4.0:arm64 (2.38.6-0ubuntu0.22.04.1) over (2.38.5-0ubuntu0.22.04.1) ...
+Preparing to unpack .../14-libwebkit2gtk-4.0-37_2.38.6-0ubuntu0.22.04.1_arm64.deb ...
+Unpacking libwebkit2gtk-4.0-37:arm64 (2.38.6-0ubuntu0.22.04.1) over (2.38.5-0ubuntu0.22.04.1) ...
+Preparing to unpack .../15-libjavascriptcoregtk-4.0-18_2.38.6-0ubuntu0.22.04.1_arm64.deb ...
+Unpacking libjavascriptcoregtk-4.0-18:arm64 (2.38.6-0ubuntu0.22.04.1) over (2.38.5-0ubuntu0.22.04.1) ...
+Preparing to unpack .../16-libfreetype6_2.11.1+dfsg-1ubuntu0.2_arm64.deb ...
+Unpacking libfreetype6:arm64 (2.11.1+dfsg-1ubuntu0.2) over (2.11.1+dfsg-1ubuntu0.1) ...
+Preparing to unpack .../17-libwebp7_1.2.2-2ubuntu0.22.04.1_arm64.deb ...
+Unpacking libwebp7:arm64 (1.2.2-2ubuntu0.22.04.1) over (1.2.2-2) ...
+Preparing to unpack .../18-libwebpdemux2_1.2.2-2ubuntu0.22.04.1_arm64.deb ...
+Unpacking libwebpdemux2:arm64 (1.2.2-2ubuntu0.22.04.1) over (1.2.2-2) ...
+Preparing to unpack .../19-git-man_1%3a2.34.1-1ubuntu1.9_all.deb ...
+Unpacking git-man (1:2.34.1-1ubuntu1.9) over (1:2.34.1-1ubuntu1.8) ...
+Preparing to unpack .../20-git_1%3a2.34.1-1ubuntu1.9_arm64.deb ...
+Unpacking git (1:2.34.1-1ubuntu1.9) over (1:2.34.1-1ubuntu1.8) ...
+Preparing to unpack .../21-ipp-usb_0.9.20-1ubuntu0.22.04.1_arm64.deb ...
+Unpacking ipp-usb (0.9.20-1ubuntu0.22.04.1) over (0.9.20-1) ...
+Preparing to unpack .../22-libegl-mesa0_22.2.5-0ubuntu0.1~22.04.2_arm64.deb ...
+Unpacking libegl-mesa0:arm64 (22.2.5-0ubuntu0.1~22.04.2) over (22.2.5-0ubuntu0.1~22.04.1) ...
+Preparing to unpack .../23-libgbm1_22.2.5-0ubuntu0.1~22.04.2_arm64.deb ...
+Unpacking libgbm1:arm64 (22.2.5-0ubuntu0.1~22.04.2) over (22.2.5-0ubuntu0.1~22.04.1) ...
+Preparing to unpack .../24-libgl1-mesa-dri_22.2.5-0ubuntu0.1~22.04.2_arm64.deb ...
+Unpacking libgl1-mesa-dri:arm64 (22.2.5-0ubuntu0.1~22.04.2) over (22.2.5-0ubuntu0.1~22.04.1) ...
+Preparing to unpack .../25-libglx-mesa0_22.2.5-0ubuntu0.1~22.04.2_arm64.deb ...
+Unpacking libglx-mesa0:arm64 (22.2.5-0ubuntu0.1~22.04.2) over (22.2.5-0ubuntu0.1~22.04.1) ...
+Preparing to unpack .../26-libglapi-mesa_22.2.5-0ubuntu0.1~22.04.2_arm64.deb ...
+Unpacking libglapi-mesa:arm64 (22.2.5-0ubuntu0.1~22.04.2) over (22.2.5-0ubuntu0.1~22.04.1) ...
+Preparing to unpack .../27-libwebpmux3_1.2.2-2ubuntu0.22.04.1_arm64.deb ...
+Unpacking libwebpmux3:arm64 (1.2.2-2ubuntu0.22.04.1) over (1.2.2-2) ...
+Preparing to unpack .../28-mesa-vulkan-drivers_22.2.5-0ubuntu0.1~22.04.2_arm64.deb ...
+Unpacking mesa-vulkan-drivers:arm64 (22.2.5-0ubuntu0.1~22.04.2) over (22.2.5-0ubuntu0.1~22.04.1) ...
+Preparing to unpack .../29-software-properties-common_0.99.22.7_all.deb ...
+Unpacking software-properties-common (0.99.22.7) over (0.99.22.6) ...
+Preparing to unpack .../30-software-properties-gtk_0.99.22.7_all.deb ...
+Unpacking software-properties-gtk (0.99.22.7) over (0.99.22.6) ...
+Preparing to unpack .../31-python3-software-properties_0.99.22.7_all.deb ...
+Unpacking python3-software-properties (0.99.22.7) over (0.99.22.6) ...
+Preparing to unpack .../32-ubuntu-desktop-minimal_1.481.1_arm64.deb ...
+Unpacking ubuntu-desktop-minimal (1.481.1) over (1.481) ...
+Preparing to unpack .../33-ubuntu-desktop_1.481.1_arm64.deb ...
+Unpacking ubuntu-desktop (1.481.1) over (1.481) ...
+Setting up libip4tc2:arm64 (1.8.7-1ubuntu5.1) ...
+Setting up mesa-vulkan-drivers:arm64 (22.2.5-0ubuntu0.1~22.04.2) ...
+Setting up ipp-usb (0.9.20-1ubuntu0.22.04.1) ...
+ipp-usb.service is a disabled or a static unit not running, not starting it.
+Setting up firefox (1:1snap1-0ubuntu2) ...
+update-alternatives: using /usr/bin/firefox to provide /usr/bin/gnome-www-browser (gnome-www-browser) in auto mode
+update-alternatives: using /usr/bin/firefox to provide /usr/bin/x-www-browser (x-www-browser) in auto mode
+Setting up ubuntu-minimal (1.481.1) ...
+Setting up libgbm1:arm64 (22.2.5-0ubuntu0.1~22.04.2) ...
+Setting up python3-problem-report (2.20.11-0ubuntu82.5) ...
+Setting up libip6tc2:arm64 (1.8.7-1ubuntu5.1) ...
+Setting up distro-info-data (0.52ubuntu0.4) ...
+Setting up libjavascriptcoregtk-4.0-18:arm64 (2.38.6-0ubuntu0.22.04.1) ...
+Setting up gir1.2-javascriptcoregtk-4.0:arm64 (2.38.6-0ubuntu0.22.04.1) ...
+Setting up ubuntu-standard (1.481.1) ...
+Setting up python3-apport (2.20.11-0ubuntu82.5) ...
+Setting up libfreetype6:arm64 (2.11.1+dfsg-1ubuntu0.2) ...
+Setting up python3-software-properties (0.99.22.7) ...
+Setting up libxtables12:arm64 (1.8.7-1ubuntu5.1) ...
+Setting up libglapi-mesa:arm64 (22.2.5-0ubuntu0.1~22.04.2) ...
+Setting up libwebp7:arm64 (1.2.2-2ubuntu0.22.04.1) ...
+Setting up git-man (1:2.34.1-1ubuntu1.9) ...
+Setting up libwebpmux3:arm64 (1.2.2-2ubuntu0.22.04.1) ...
+Setting up iptables (1.8.7-1ubuntu5.1) ...
+Setting up libwebpdemux2:arm64 (1.2.2-2ubuntu0.22.04.1) ...
+Setting up libgl1-mesa-dri:arm64 (22.2.5-0ubuntu0.1~22.04.2) ...
+Setting up software-properties-common (0.99.22.7) ...
+Setting up apport (2.20.11-0ubuntu82.5) ...
+apport-autoreport.service is a disabled or a static unit, not starting it.
+Setting up libegl-mesa0:arm64 (22.2.5-0ubuntu0.1~22.04.2) ...
+Setting up git (1:2.34.1-1ubuntu1.9) ...
+Setting up apport-gtk (2.20.11-0ubuntu82.5) ...
+Setting up libwebkit2gtk-4.0-37:arm64 (2.38.6-0ubuntu0.22.04.1) ...
+Setting up gir1.2-webkit2-4.0:arm64 (2.38.6-0ubuntu0.22.04.1) ...
+Setting up libglx-mesa0:arm64 (22.2.5-0ubuntu0.1~22.04.2) ...
+Setting up software-properties-gtk (0.99.22.7) ...
+Processing triggers for desktop-file-utils (0.26-1ubuntu3) ...
+Processing triggers for hicolor-icon-theme (0.17-2) ...
+Processing triggers for gnome-menus (3.36.0-1ubuntu3) ...
+Processing triggers for libglib2.0-0:arm64 (2.72.4-0ubuntu2) ...
+Setting up ubuntu-desktop-minimal (1.481.1) ...
+Processing triggers for libc-bin (2.35-0ubuntu3.1) ...
+Processing triggers for man-db (2.10.2-1) ...
+Processing triggers for dbus (1.12.20-2ubuntu4.1) ...
+Processing triggers for shared-mime-info (2.1-2) ...
+Processing triggers for mailcap (3.70+nmu1ubuntu1) ...
+Setting up ubuntu-desktop (1.481.1) ...
+andrey@utm-vm:~$ sudo apt list --upgradable
+Listing... Done
+andrey@utm-vm:~$ pwd
+/home/andrey
+andrey@utm-vm:~$ ls
+Desktop    Downloads  Pictures  Templates  all.txt    err.txt  lws      snap
+Documents  Music      Public    Videos     cycles.sh  ls_txt   sdt.txt  testsc
+andrey@utm-vm:~$ mkdir ICW
+andrey@utm-vm:~$ cd ICW/
+andrey@utm-vm:~/ICW$ pwd
+/home/andrey/ICW
+andrey@utm-vm:~/ICW$ mkdir Toys_for_schoolchildren Toys_for_preschoolers
+andrey@utm-vm:~/ICW$ ll
+total 16
+drwxrwxr-x  4 andrey andrey 4096 мая 17 00:40 ./
+drwxr-x--- 16 andrey andrey 4096 мая 17 00:38 ../
+drwxrwxr-x  2 andrey andrey 4096 мая 17 00:40 Toys_for_preschoolers/
+drwxrwxr-x  2 andrey andrey 4096 мая 17 00:40 Toys_for_schoolchildren/
+andrey@utm-vm:~/ICW$ cd Toys_for_schoolchildren/
+andrey@utm-vm:~/ICW/Toys_for_schoolchildren$ touch Robots.txt Constructor.txt Board_games.txt
+andrey@utm-vm:~/ICW/Toys_for_schoolchildren$ ll
+total 8
+drwxrwxr-x 2 andrey andrey 4096 мая 17 00:44 ./
+drwxrwxr-x 4 andrey andrey 4096 мая 17 00:43 ../
+-rw-rw-r-- 1 andrey andrey    0 мая 17 00:44 Board_games.txt
+-rw-rw-r-- 1 andrey andrey    0 мая 17 00:44 Constructor.txt
+-rw-rw-r-- 1 andrey andrey    0 мая 17 00:44 Robots.txt
+andrey@utm-vm:~/ICW/Toys_for_schoolchildren$ cd -
+/home/andrey/ICW
+andrey@utm-vm:~/ICW$ cd Toys_for_preschoolers/
+andrey@utm-vm:~/ICW/Toys_for_preschoolers$ touch Soft_toys.txt Dolls.txt Toy_cars.txt
+andrey@utm-vm:~/ICW/Toys_for_preschoolers$ ll
+total 8
+drwxrwxr-x 2 andrey andrey 4096 мая 17 00:47 ./
+drwxrwxr-x 4 andrey andrey 4096 мая 17 00:43 ../
+-rw-rw-r-- 1 andrey andrey    0 мая 17 00:47 Dolls.txt
+-rw-rw-r-- 1 andrey andrey    0 мая 17 00:47 Soft_toys.txt
+-rw-rw-r-- 1 andrey andrey    0 мая 17 00:47 Toy_cars.txt
+andrey@utm-vm:~/ICW/Toys_for_preschoolers$ cd -
+/home/andrey/ICW
+andrey@utm-vm:~/ICW$ tree
+Command 'tree' not found, but can be installed with:
+sudo snap install tree
+andrey@utm-vm:~/ICW$ sudo snap install tree
+[sudo] password for andrey: 
+tree 1.8.0+pkg-3fd6 from 林博仁(Buo-ren, Lin) (brlin) installed
+andrey@utm-vm:~/ICW$ tree
+.
+├── Toys_for_preschoolers
+│   ├── Dolls.txt
+│   ├── Soft_toys.txt
+│   └── Toy_cars.txt
+└── Toys_for_schoolchildren
+    ├── Board_games.txt
+    ├── Constructor.txt
+    └── Robots.txt
+
+2 directories, 6 files
+andrey@utm-vm:~/ICW$ mkdir Name_Toys
+andrey@utm-vm:~/ICW$ tree
+.
+├── Name_Toys
+├── Toys_for_preschoolers
+│   ├── Dolls.txt
+│   ├── Soft_toys.txt
+│   └── Toy_cars.txt
+└── Toys_for_schoolchildren
+    ├── Board_games.txt
+    ├── Constructor.txt
+    └── Robots.txt
+
+3 directories, 6 files
+andrey@utm-vm:~/ICW$ mv Toys_for_schoolchildren/* Toys_for_preschoolers/* Name_Toys/
+andrey@utm-vm:~/ICW$ tree
+.
+├── Name_Toys
+│   ├── Board_games.txt
+│   ├── Constructor.txt
+│   ├── Dolls.txt
+│   ├── Robots.txt
+│   ├── Soft_toys.txt
+│   └── Toy_cars.txt
+├── Toys_for_preschoolers
+└── Toys_for_schoolchildren
+
+3 directories, 6 files
+andrey@utm-vm:~/ICW$ rm -r Toys_for_schoolchildren/ Toys_for_preschoolers/
+andrey@utm-vm:~/ICW$ tree
+.
+└── Name_Toys
+    ├── Board_games.txt
+    ├── Constructor.txt
+    ├── Dolls.txt
+    ├── Robots.txt
+    ├── Soft_toys.txt
+    └── Toy_cars.txt
+
+1 directory, 6 files
+andrey@utm-vm:~/ICW$ mv Name_Toys/ Toys/
+andrey@utm-vm:~/ICW$ tree
+.
+└── Toys
+    ├── Board_games.txt
+    ├── Constructor.txt
+    ├── Dolls.txt
+    ├── Robots.txt
+    ├── Soft_toys.txt
+    └── Toy_cars.txt
+
+1 directory, 6 files
+andrey@utm-vm:~/ICW$ systemctl status cron
+● cron.service - Regular background program processing daemon
+     Loaded: loaded (/lib/systemd/system/cron.service; enabled; vendor preset: enabled)
+     Active: active (running) since Wed 2023-05-17 00:27:49 EET; 1h 8min ago
+       Docs: man:cron(8)
+   Main PID: 544 (cron)
+      Tasks: 1 (limit: 4553)
+     Memory: 432.0K
+        CPU: 75ms
+     CGroup: /system.slice/cron.service
+             └─544 /usr/sbin/cron -f -P
+
+мая 17 00:27:49 utm-vm systemd[1]: Started Regular background program processing daemon.
+мая 17 00:27:49 utm-vm cron[544]: (CRON) INFO (pidfile fd = 3)
+мая 17 00:27:49 utm-vm cron[544]: (CRON) INFO (Running @reboot jobs)
+мая 17 01:17:01 utm-vm CRON[6619]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+мая 17 01:17:01 utm-vm CRON[6619]: pam_unix(cron:session): session closed for user root
+andrey@utm-vm:~/ICW$ mkdir part8/
+andrey@utm-vm:~/ICW$ cd part8/
+andrey@utm-vm:~/ICW/part8$ nano my_script.sh 
+andrey@utm-vm:~/ICW/part8$ bash my_script.sh 
+andrey@utm-vm:~/ICW/part8$ cat hello.txt 
+Hello World!
+andrey@utm-vm:~/ICW/part8$ cat my_script.sh 
+#!bin/bash/
+
+echo "Hello World!" >> hello.txt
+andrey@utm-vm:~/ICW/part8$ crontab -e
+No modification made
+andrey@utm-vm:~/ICW/part8$ crontab -l
+MAILTO=""
+*/3 * * * * bash /home/andrey/ICW/part8/my_script.sh
+
+andrey@utm-vm:~/ICW/part8$ systemctl restart cron
+==== AUTHENTICATING FOR org.freedesktop.systemd1.manage-units ===
+Authentication is required to restart 'cron.service'.
+Authenticating as: Andrey,,, (andrey)
+Password: 
+==== AUTHENTICATION COMPLETE ===
+andrey@utm-vm:~/ICW/part8$ nano my_script.sh 
+andrey@utm-vm:~/ICW/part8$ cat my_script.sh 
+#!bin/bash/
+
+echo "Hello World!" >> /home/andrey/ICW/part8/hello.txt
+andrey@utm-vm:~/ICW/part8$ systemctl status cron
+● cron.service - Regular background program processing daemon
+     Loaded: loaded (/lib/systemd/system/cron.service; enabled; vendor preset: enabled)
+     Active: active (running) since Wed 2023-05-17 02:38:00 EET; 13min ago
+       Docs: man:cron(8)
+   Main PID: 7248 (cron)
+      Tasks: 1 (limit: 4553)
+     Memory: 344.0K
+        CPU: 169ms
+     CGroup: /system.slice/cron.service
+             └─7248 /usr/sbin/cron -f -P
+
+мая 17 02:42:01 utm-vm CRON[7286]: pam_unix(cron:session): session closed for user andrey
+мая 17 02:45:01 utm-vm CRON[7326]: pam_unix(cron:session): session opened for user andrey(uid=1000) by (uid=0)
+мая 17 02:45:01 utm-vm CRON[7327]: (andrey) CMD (bash /home/andrey/ICW/part8/my_script.sh)
+мая 17 02:45:01 utm-vm CRON[7326]: pam_unix(cron:session): session closed for user andrey
+мая 17 02:48:01 utm-vm CRON[7354]: pam_unix(cron:session): session opened for user andrey(uid=1000) by (uid=0)
+мая 17 02:48:01 utm-vm CRON[7355]: (andrey) CMD (bash /home/andrey/ICW/part8/my_script.sh)
+мая 17 02:48:01 utm-vm CRON[7354]: pam_unix(cron:session): session closed for user andrey
+мая 17 02:51:02 utm-vm CRON[7396]: pam_unix(cron:session): session opened for user andrey(uid=1000) by (uid=0)
+мая 17 02:51:02 utm-vm CRON[7397]: (andrey) CMD (bash /home/andrey/ICW/part8/my_script.sh)
+мая 17 02:51:02 utm-vm CRON[7396]: pam_unix(cron:session): session closed for user andrey
+andrey@utm-vm:~/ICW/part8$ cat hello.txt 
+Hello World!
+Hello World!
+Hello World!
+Hello World!
+andrey@utm-vm:~/ICW/part8$ ll
+total 16
+drwxrwxr-x 2 andrey andrey 4096 мая 17 02:48 ./
+drwxrwxr-x 4 andrey andrey 4096 мая 17 01:49 ../
+-rw-rw-r-- 1 andrey andrey   52 мая 17 02:51 hello.txt
+-rw-rw-r-- 1 andrey andrey   69 мая 17 02:44 my_script.sh
+andrey@utm-vm:~/ICW/part8$ tree
+.
+├── hello.txt
+└── my_script.sh
+
+0 directories, 2 files
+andrey@utm-vm:~/ICW/part8$ crontab -l
+MAILTO=""
+*/3 * * * * bash /home/andrey/ICW/part8/my_script.sh
+
+andrey@utm-vm:~/ICW/part8$ crontab -r
+andrey@utm-vm:~/ICW/part8$ crontab -l
+no crontab for andrey
+andrey@utm-vm:~/ICW/part8$ exit
+logout
+Connection to 192.168.64.10 closed.
+(base) a_zavershinskiy@MBPAZavshinskiy ~ % exit
+
+Saving session...
+...copying shared history...
+...saving history...truncating history files...
+...completed.
+Deleting expired sessions...      45 completed.
+
+[Process completed]

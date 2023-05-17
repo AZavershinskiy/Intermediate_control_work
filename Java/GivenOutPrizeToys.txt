@@ -1,0 +1,4 @@
+1;Cheburashka;1;10
+2;Robocop;2;20
+8;Soldier;1;49
+7;Ball;1;35
